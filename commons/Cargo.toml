@@ -10,6 +10,6 @@ authors = ["tian <tian@racoons.dev>"]
 [dependencies]
 anchor-client = { workspace = true, features = ["async"] }
 anyhow = { workspace = true }
-lb_clmm = { path = "../programs/lb_clmm", features = ["cpi"] }
+lb_clmm = { version = "0.8.1", registry = "lhava-dev",  features = ["cpi"] }
 tokio = { workspace = true, features = ["full", "parking_lot"] }
 bincode = "1.3.3"

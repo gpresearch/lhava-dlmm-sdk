@@ -1152,7 +1152,7 @@ dependencies = [
  "bincode",
  "clap 4.5.21",
  "commons",
- "lb_clmm",
+ "lb_clmm 0.8.1",
  "mpl-token-metadata",
  "proptest",
  "rand 0.8.5",
@@ -1183,12 +1183,12 @@ dependencies = [
 
 [[package]]
 name = "commons"
-version = "0.3.0"
+version = "0.3.1"
 dependencies = [
  "anchor-client",
  "anyhow",
  "bincode",
- "lb_clmm",
+ "lb_clmm 0.8.1 (sparse+https://lhava-dev-533267214762.d.codeartifact.us-east-2.amazonaws.com/cargo/lhava-dev/)",
  "tokio",
 ]
 
@@ -2441,6 +2441,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "lb_clmm"
+version = "0.8.1"
+source = "sparse+https://lhava-dev-533267214762.d.codeartifact.us-east-2.amazonaws.com/cargo/lhava-dev/"
+checksum = "27a5e1a48d7de1c4de4c5050894ed8a8a6420862e6eca10621bc31f9c2d3800d"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+ "bytemuck",
+ "mpl-token-metadata",
+ "num-integer",
+ "num-traits",
+ "num_enum 0.7.3",
+ "ruint",
+ "solana-program",
+ "uint",
+]
+
+[[package]]
 name = "libc"
 version = "0.2.164"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2580,7 +2598,7 @@ dependencies = [
  "clap 4.5.21",
  "env_logger",
  "hyper",
- "lb_clmm",
+ "lb_clmm 0.8.1",
  "log",
  "routerify",
  "serde",
