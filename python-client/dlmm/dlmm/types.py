@@ -16,7 +16,8 @@ class StrategyType(Enum):
     BidAskImBalanced=5,
     SpotBalanced=6,
     CurveBalanced=7,
-    BidAskBalanced=8
+    BidAskBalanced=8,
+    SomeRandom=9
 
     def __str__(self) -> str:
         return f"{self.value[0]}"
@@ -151,7 +152,8 @@ class PositionData():
         if data.get("rewardTwo") is None:
             raise AttributeError("rewardTwo is required")
         if data.get("feeOwner") is None:
-            raise AttributeError("feeOwner is required")
+            # raise AttributeError("feeOwner is required")
+            pass;
         if data.get("totalClaimedFeeXAmount") is None:
             raise AttributeError("totalClaimedFeeXAmount is required")
         if data.get("totalClaimedFeeYAmount") is None:
@@ -167,7 +169,7 @@ class PositionData():
         self.fee_Y = data["feeY"]
         self.reward_one = data["rewardOne"]
         self.reward_two = data["rewardTwo"]
-        self.fee_owner = data["feeOwner"]
+        self.fee_owner = "11111111111111111111111111111111"
         self.total_claimed_fee_X_amount = data["totalClaimedFeeXAmount"]
         self.total_claimed_fee_Y_amount = data["totalClaimedFeeYAmount"]
     
@@ -270,7 +272,7 @@ class LBPair:
         self.token_y_mint = data["tokenYMint"]
         self.padding1 = data["padding1"]
         self.padding2 = data["padding2"]
-        self.fee_owner = Pubkey.from_string(data["feeOwner"])
+        self.fee_owner = Pubkey.from_string("11111111111111111111111111111111")
         self.base_key = data["baseKey"]
         
 @dataclass
