@@ -16,7 +16,8 @@ class StrategyType(Enum):
     BidAskImBalanced=5,
     SpotBalanced=6,
     CurveBalanced=7,
-    BidAskBalanced=8
+    BidAskBalanced=8,
+    SomeRandom=9
 
     def __str__(self) -> str:
         return f"{self.value[0]}"
